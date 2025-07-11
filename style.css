@@ -1,7 +1,7 @@
 body {
+  font-family: 'Montserrat', 'Inter', sans-serif;
   background-color: #121212;
   color: #f0f0f0;
-  font-family: 'Montserrat', sans-serif;
   max-width: 900px;
   margin: 0 auto;
   padding: 30px 20px;
@@ -10,6 +10,8 @@ body {
 
 header {
   text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444;
   margin-bottom: 40px;
 }
 
@@ -17,6 +19,7 @@ header {
   width: 140px;
   border-radius: 12px;
   margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   border: 2px solid #333;
 }
 
@@ -28,9 +31,11 @@ h1 {
 
 h2 {
   font-weight: 600;
-  color: #e0e0e0;
-  margin-top: 40px;
+  margin: 40px 0 10px;
   font-size: 1.5em;
+  color: #e0e0e0;
+  border-left: 4px solid #fff;
+  padding-left: 10px;
 }
 
 h3 {
@@ -39,8 +44,15 @@ h3 {
   color: #b0b0b0;
 }
 
-p, ul, li {
+p,
+ul,
+li {
   color: #d0d0d0;
+  font-weight: 300;
+}
+
+section {
+  margin-top: 40px;
 }
 
 ul {
@@ -60,22 +72,29 @@ form {
   margin-top: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 12px;
   font-size: 16px;
   background-color: #1e1e1e;
+  color: white;
   border: 1px solid #333;
   border-radius: 6px;
-  color: white;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
 }
 
 button {
   background-color: #ffffff;
   color: #121212;
-  border: none;
   padding: 12px;
   font-size: 16px;
   font-weight: bold;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s;
@@ -85,7 +104,12 @@ button:hover {
   background-color: #e0e0e0;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
   .logo {
     width: 100px;
   }
